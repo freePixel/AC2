@@ -1,0 +1,23 @@
+GAS LISTING prog5.s 			page 1
+
+
+DEFINED SYMBOLS
+             prog5.s:1      *ABS*:0000000000000001 UP
+             prog5.s:2      *ABS*:0000000000000000 DOWN
+             prog5.s:4      *ABS*:0000000000000008 PRINT_STR
+             prog5.s:5      *ABS*:0000000000000006 PRINT_INT
+             prog5.s:6      *ABS*:0000000000000007 PRINT_INT10
+             prog5.s:7      *ABS*:0000000000000005 READ_INT10
+             prog5.s:8      *ABS*:0000000000000001 IN_KEY
+             prog5.s:9      *ABS*:0000000000000003 PUT_CHAR
+             prog5.s:20     .text:0000000000000000 main
+             prog5.s:31     .text:000000000000001c do
+             prog5.s:99     .text:00000000000000dc wait
+             prog5.s:66     .text:0000000000000088 endif1
+             prog5.s:71     .text:0000000000000098 endif2
+             prog5.s:79     .text:00000000000000b0 else3
+             prog5.s:84     .text:00000000000000b8 endif3
+             prog5.s:101    .text:00000000000000e0 wait_for
+             prog5.s:106    .text:0000000000000100 wait_efor
+
+NO UNDEFINED SYMBOLS
