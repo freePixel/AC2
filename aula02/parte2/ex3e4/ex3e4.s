@@ -31,6 +31,8 @@ main:
 	li $s1 , 0
 	li $s2 , 0
 
+	li $s3 , 100
+
 
 while:
 	
@@ -64,20 +66,21 @@ eif11:
 	bne $s4 , RUN , eif12
 	
 
+	addi $s2 , $s2 , 1
+
 	rem $v0 , $s2 , 10
 	bne $v0 , 0 , eif1
 	
-	addi $s2 , $s2 , 1
+	addi $s0 , $s0 , 1
 
 eif1:
-	rem $v0 , $s1 , 2
+	rem $v0 , $s2 , 2
 	bne $v0 , 0 , eif2
 	
 	addi $s1 , $s1 , 1	
 
 eif2:
 	
-	addi $s2 , $s2 , 1
 
 eif12:
 
