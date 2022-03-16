@@ -1,0 +1,26 @@
+GAS LISTING ex3e4.s 			page 1
+
+
+DEFINED SYMBOLS
+             ex3e4.s:3      *ABS*:000000000005000a FORMAT
+             ex3e4.s:4      *ABS*:000000000000000b READ_CORE_TIMER
+             ex3e4.s:5      *ABS*:000000000000000c RESET_CORE_TIMER
+             ex3e4.s:6      *ABS*:0000000000000003 PUT_CHAR
+             ex3e4.s:7      *ABS*:0000000000000006 PRINT_INT
+             ex3e4.s:8      *ABS*:0000000000000001 IN_KEY
+             ex3e4.s:9      *ABS*:0000000000000000 RUN
+             ex3e4.s:10     *ABS*:0000000000000001 STOP
+             ex3e4.s:20     .text:0000000000000000 main
+             ex3e4.s:35     .text:0000000000000028 while
+             ex3e4.s:44     .text:0000000000000040 eif8
+             ex3e4.s:50     .text:0000000000000050 eif9
+             ex3e4.s:56     .text:0000000000000060 eif10
+             ex3e4.s:62     .text:0000000000000070 eif11
+             ex3e4.s:82     .text:00000000000000ac eif12
+             ex3e4.s:72     .text:0000000000000090 eif1
+             ex3e4.s:78     .text:00000000000000a8 eif2
+             ex3e4.s:132    .text:0000000000000140 delay
+             ex3e4.s:135    .text:0000000000000148 delay_while
+             ex3e4.s:141    .text:0000000000000170 delay_ewhile
+
+NO UNDEFINED SYMBOLS

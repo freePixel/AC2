@@ -34,7 +34,7 @@ main:
     li $v0 , READ_STR
     syscall             # readStr( str1, SIZE );
 
-    LA $a0 , str2
+    la $a0 , str2
     li $a1 , SIZE
     li $v0 , READ_STR
     syscall             # readStr( str2, SIZE ); 

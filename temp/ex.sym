@@ -1,0 +1,23 @@
+GAS LISTING ex.s 			page 1
+
+
+DEFINED SYMBOLS
+                ex.s:1      *ABS*:0000000000000001 UP
+                ex.s:2      *ABS*:0000000000000000 DOWN
+                ex.s:4      *ABS*:0000000000000008 PRINT_STR
+                ex.s:5      *ABS*:0000000000000006 PRINT_INT
+                ex.s:6      *ABS*:0000000000000007 PRINT_INT10
+                ex.s:7      *ABS*:0000000000000005 READ_INT10
+                ex.s:8      *ABS*:0000000000000001 IN_KEY
+                ex.s:9      *ABS*:0000000000000003 PUT_CHAR
+                ex.s:20     .text:0000000000000000 main
+                ex.s:31     .text:000000000000001c do
+                ex.s:99     .text:00000000000000dc wait
+                ex.s:66     .text:0000000000000088 endif1
+                ex.s:71     .text:0000000000000098 endif2
+                ex.s:79     .text:00000000000000b0 else3
+                ex.s:84     .text:00000000000000b8 endif3
+                ex.s:101    .text:00000000000000e0 wait_for
+                ex.s:106    .text:0000000000000104 wait_efor
+
+NO UNDEFINED SYMBOLS

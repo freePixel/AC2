@@ -1,32 +1,32 @@
-GAS LISTING aula01/prog6/prog6.s 			page 1
+GAS LISTING prog6.s 			page 1
 
 
 DEFINED SYMBOLS
-aula01/prog6/prog6.s:1      *ABS*:0000000000000014 SIZE
-aula01/prog6/prog6.s:2      *ABS*:0000000000000008 PRINT_STR
-aula01/prog6/prog6.s:3      *ABS*:0000000000000006 PRINT_INT
-aula01/prog6/prog6.s:4      *ABS*:0000000000000007 PRINT_INT10
-aula01/prog6/prog6.s:5      *ABS*:0000000000000005 READ_INT10
-aula01/prog6/prog6.s:6      *ABS*:0000000000000001 IN_KEY
-aula01/prog6/prog6.s:7      *ABS*:0000000000000003 PUT_CHAR
-aula01/prog6/prog6.s:8      *ABS*:0000000000000009 READ_STR
-aula01/prog6/prog6.s:13     .data:0000000000000000 str1
-aula01/prog6/prog6.s:14     .data:0000000000000015 str2
-aula01/prog6/prog6.s:15     .data:000000000000002a str3
-aula01/prog6/prog6.s:16     .data:0000000000000053 str_tex1
-aula01/prog6/prog6.s:17     .data:0000000000000069 str_tex2
-aula01/prog6/prog6.s:23     .text:0000000000000000 main
-aula01/prog6/prog6.s:97     .text:00000000000000f8 strcpy
-aula01/prog6/prog6.s:111    .text:0000000000000120 strcat
-aula01/prog6/prog6.s:146    .text:000000000000017c strcmp
-aula01/prog6/prog6.s:83     .text:00000000000000d4 strlen
-aula01/prog6/prog6.s:86     .text:00000000000000d8 strlen_for
-aula01/prog6/prog6.s:92     .text:00000000000000f0 strlen_efor
-aula01/prog6/prog6.s:99     .text:00000000000000fc strcpy_for
-aula01/prog6/prog6.s:106    .text:0000000000000118 strcpy_efor
-aula01/prog6/prog6.s:123    .text:0000000000000140 strcat_for
-aula01/prog6/prog6.s:128    .text:0000000000000154 strcat_efor
-aula01/prog6/prog6.s:147    .text:000000000000017c strcmp_for
-aula01/prog6/prog6.s:157    .text:00000000000001a0 strcmp_efor
+             prog6.s:1      *ABS*:0000000000000014 SIZE
+             prog6.s:2      *ABS*:0000000000000008 PRINT_STR
+             prog6.s:3      *ABS*:0000000000000006 PRINT_INT
+             prog6.s:4      *ABS*:0000000000000007 PRINT_INT10
+             prog6.s:5      *ABS*:0000000000000005 READ_INT10
+             prog6.s:6      *ABS*:0000000000000001 IN_KEY
+             prog6.s:7      *ABS*:0000000000000003 PUT_CHAR
+             prog6.s:8      *ABS*:0000000000000009 READ_STR
+             prog6.s:13     .data:0000000000000000 str1
+             prog6.s:14     .data:0000000000000015 str2
+             prog6.s:15     .data:000000000000002a str3
+             prog6.s:16     .data:0000000000000053 str_tex1
+             prog6.s:17     .data:0000000000000069 str_tex2
+             prog6.s:23     .text:0000000000000000 main
+             prog6.s:97     .text:00000000000000f8 strcpy
+             prog6.s:111    .text:0000000000000120 strcat
+             prog6.s:146    .text:000000000000017c strcmp
+             prog6.s:83     .text:00000000000000d4 strlen
+             prog6.s:86     .text:00000000000000d8 strlen_for
+             prog6.s:92     .text:00000000000000f0 strlen_efor
+             prog6.s:99     .text:00000000000000fc strcpy_for
+             prog6.s:106    .text:0000000000000118 strcpy_efor
+             prog6.s:123    .text:0000000000000140 strcat_for
+             prog6.s:128    .text:0000000000000154 strcat_efor
+             prog6.s:147    .text:000000000000017c strcmp_for
+             prog6.s:157    .text:00000000000001a0 strcmp_efor
 
 NO UNDEFINED SYMBOLS
