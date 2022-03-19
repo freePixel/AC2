@@ -14,7 +14,7 @@
 
 
 #I/O
-.equ SFT_BASE_HI , 0xBF88
+.equ SFR_BASE_HI , 0xBF88
 
 .equ TRISB , 0x6040
 .equ PORTB  , 0x6050
@@ -39,5 +39,34 @@
 
 .globl main
 
+
+
+
 main:
+	lui $t0 , SFR_BASE_HI
+	lw $t1 , TRISE($t0)
+	andi $t1 , $t1 , 0xfffe		
+	sw $t1 , TRISE($t0)		#RE0 = OUTPUT
+
+	lw $t1 , TRISD($t0)
+	ori $t1 , $t1 , 0x0100
+	sw $t1 , TRISD($t0)		#RD8 = INPUT
+
+	
+
+while:					#while(true){
+	
+	lw $t1 , PORTD($t0)
+	andi $t1 , $t1 , 0x0100		# $t1 = 0b0000 ... 000 RB0 (LER BIT 8 DO PORTD)
+
+	#xori $t1 , $t1 , 0x0100	# INVERTER RD8 (EX 2)
+	
+	lw $t2 , LATE($t0)
+	andi $t2 , $t2 , 0xfffe		
+	or $t2 , $t2 , $t1		# $t2 = 'LATE' COM O ÚLTIMO BIT = RB0
+	sw $t2 , LATE($t0)		
+
+	j while			#}
+
+	jr $ra		#}
 	

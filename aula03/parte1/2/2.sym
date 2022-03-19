@@ -1,0 +1,33 @@
+GAS LISTING 2.s 			page 1
+
+
+DEFINED SYMBOLS
+                 2.s:2      *ABS*:0000000000000001 IN_KEY
+                 2.s:3      *ABS*:0000000000000002 GET_CHAR
+                 2.s:4      *ABS*:0000000000000003 PUT_CHAR
+                 2.s:5      *ABS*:0000000000000004 READ_INT
+                 2.s:6      *ABS*:0000000000000005 READ_INT10
+                 2.s:7      *ABS*:0000000000000006 PRINT_INT
+                 2.s:8      *ABS*:0000000000000007 PRINT_INT10
+                 2.s:9      *ABS*:0000000000000008 PRINT_STR
+                 2.s:10     *ABS*:0000000000000009 READ_STR
+                 2.s:11     *ABS*:000000000000000a EXIT
+                 2.s:12     *ABS*:000000000000000b READ_CORE_TIMER
+                 2.s:13     *ABS*:000000000000000c RESET_CORE_TIMER
+                 2.s:17     *ABS*:000000000000bf88 SFR_BASE_HI
+                 2.s:19     *ABS*:0000000000006040 TRISB
+                 2.s:20     *ABS*:0000000000006050 PORTB
+                 2.s:21     *ABS*:0000000000006060 LATB
+                 2.s:23     *ABS*:0000000000006080 TRISC
+                 2.s:24     *ABS*:0000000000006090 PORTC
+                 2.s:25     *ABS*:00000000000060a0 LATC
+                 2.s:27     *ABS*:00000000000060c0 TRISD
+                 2.s:28     *ABS*:00000000000060d0 PORTD
+                 2.s:29     *ABS*:00000000000060e0 LATD
+                 2.s:31     *ABS*:0000000000006100 TRISE
+                 2.s:32     *ABS*:0000000000006110 PORTE
+                 2.s:33     *ABS*:0000000000006120 LATE
+                 2.s:45     .text:0000000000000000 main
+                 2.s:57     .text:000000000000001c while
+
+NO UNDEFINED SYMBOLS
