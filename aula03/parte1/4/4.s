@@ -14,7 +14,7 @@
 
 
 #I/O
-.equ SFT_BASE_HI , 0xBF88
+.equ SFR_BASE_HI , 0xBF88
 
 .equ TRISB , 0x6040
 .equ PORTB  , 0x6050
@@ -40,4 +40,27 @@
 .globl main
 
 main:
-	
+	lui $t0 , SFR_BASE_HI
+
+	lw $t1 , TRISB($t0)
+	ori $t1 , $t1 , 0x000f
+	sw $t1 , TRISB($t0)			#RB0-RB3 -> INPUT
+
+	lw $t1 , TRISE($t0)
+	andi $t1 , $t1 , 0xfff0
+	sw $t1 , TRISB($t0)			#RE0-RE3 -> OUTPUT
+
+while:							#while(true){
+
+	lw $t1 , PORTB($t0)
+	xori $t1 , 0x0009 			# INVERTER BIT 0 E 3 -> 1001 -> 0x0009
+
+	lw $t2 , LATE($t0)
+	andi $t2 , $t2 , 0xfff0
+	or $t2 , $t2 , $t1
+	sw $t2 , LATE($t0)			# RE0 = ~RB0 , RE1 = RB1 , RE2 = RB2 , RE3 = ~RB3
+
+	j while						#}
+
+
+	jr $ra 							#}

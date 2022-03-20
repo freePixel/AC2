@@ -1,0 +1,20 @@
+GAS LISTING ex1.s 			page 1
+
+
+DEFINED SYMBOLS
+               ex1.s:1      *ABS*:0000000000000003 PUT_CHAR
+               ex1.s:2      *ABS*:0000000000000006 PRINT_INT
+               ex1.s:3      *ABS*:000000000000000b READ_CORE_TIMER
+               ex1.s:4      *ABS*:000000000000000c RESET_CORE_TIMER
+               ex1.s:5      *ABS*:0000000000000001 IN_KEY
+               ex1.s:20     .text:0000000000000000 main
+               ex1.s:33     .text:0000000000000028 while
+               ex1.s:42     .text:0000000000000040 endif1
+               ex1.s:48     .text:0000000000000050 endif2
+               ex1.s:54     .text:0000000000000068 endif3
+               ex1.s:60     .text:0000000000000080 endif4
+               ex1.s:114    .text:0000000000000118 delay
+               ex1.s:118    .text:0000000000000120 delay_while
+               ex1.s:126    .text:0000000000000144 delay_ewhile
+
+NO UNDEFINED SYMBOLS
