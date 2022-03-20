@@ -48,7 +48,7 @@ main:
 
 	lw $t1 , TRISE($t0)
 	andi $t1 , $t1 , 0xfff0
-	sw $t1 , TRISB($t0)			#RE0-RE3 -> OUTPUT
+	sw $t1 , TRISE($t0)			#RE0-RE3 -> OUTPUT
 
 while:							#while(true){
 
