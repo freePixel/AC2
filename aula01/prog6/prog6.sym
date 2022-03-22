@@ -14,19 +14,19 @@ DEFINED SYMBOLS
              prog6.s:14     .data:0000000000000015 str2
              prog6.s:15     .data:000000000000002a str3
              prog6.s:16     .data:0000000000000053 str_tex1
-             prog6.s:17     .data:0000000000000069 str_tex2
+             prog6.s:17     .data:000000000000006a str_tex2
              prog6.s:23     .text:0000000000000000 main
-             prog6.s:97     .text:00000000000000f8 strcpy
-             prog6.s:111    .text:0000000000000120 strcat
-             prog6.s:146    .text:000000000000017c strcmp
-             prog6.s:83     .text:00000000000000d4 strlen
-             prog6.s:86     .text:00000000000000d8 strlen_for
-             prog6.s:92     .text:00000000000000f0 strlen_efor
-             prog6.s:99     .text:00000000000000fc strcpy_for
-             prog6.s:106    .text:0000000000000118 strcpy_efor
-             prog6.s:123    .text:0000000000000140 strcat_for
-             prog6.s:128    .text:0000000000000154 strcat_efor
-             prog6.s:147    .text:000000000000017c strcmp_for
-             prog6.s:157    .text:00000000000001a0 strcmp_efor
+             prog6.s:109    .text:000000000000011c strcpy
+             prog6.s:123    .text:0000000000000144 strcat
+             prog6.s:158    .text:00000000000001a0 strcmp
+             prog6.s:95     .text:00000000000000f8 strlen
+             prog6.s:98     .text:00000000000000fc strlen_for
+             prog6.s:104    .text:0000000000000114 strlen_efor
+             prog6.s:111    .text:0000000000000120 strcpy_for
+             prog6.s:118    .text:000000000000013c strcpy_efor
+             prog6.s:135    .text:0000000000000164 strcat_for
+             prog6.s:140    .text:0000000000000178 strcat_efor
+             prog6.s:159    .text:00000000000001a0 strcmp_for
+             prog6.s:169    .text:00000000000001c4 strcmp_efor
 
 NO UNDEFINED SYMBOLS

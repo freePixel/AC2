@@ -61,23 +61,11 @@ while:                          #{
     sw $t1 , LATE($t0)          #write counter
 
 
-    #ler RB3
-    lw $t1 , PORTB($t0)
-    andi $t1 , 0x0008
-    beq $t1 , 0x0008 , else       #if(RB3 != 0x0008){
 
-    addi $s0 , $s0 , -1             #counter--;}
-    j endif
-else:
-    addi $s0 , $s0 , 1             #else{
-                                   # counter++;
+    addi $s0 , $s0 , 1          #counter++;
 
-endif:                          #}
-
-
-
-    li $v0 , 500
-    jal delay                   #delay(500);
+    li $v0 , 1000
+    jal delay                   #delay(1000);
 
     j while                     #}
 

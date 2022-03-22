@@ -14,7 +14,7 @@
 
 
 #I/O
-.equ SFT_BASE_HI , 0xBF88
+.equ SFR_BASE_HI , 0xBF88
 
 .equ TRISB , 0x6040
 .equ PORTB  , 0x6050
@@ -38,6 +38,74 @@
 .text
 
 .globl main
-
+#$s0 -> contador
 main:
-	
+    
+    li $t0 , SFR_BASE_HI
+    lw $t1 , TRISE($t0)
+    andi $t1 , $t1 , 0xfff0
+    sw $t1 , TRISE($t0)         #RE[0..4] OUTPUTS
+
+    lw $t1 , TRISB($t0)
+    ori $t1 , $t1 , 0x000f
+    sw $t1 , TRISB($t0)        #RB[0..4] INPUTS
+
+while:                          #{
+
+    
+    li $t0 , SFR_BASE_HI
+    lw $t1 , LATE($t0)
+    andi $t1 , $t1 , 0xfff0
+    andi $s0 , $s0 , 0x000f     #evita a escrita em RB4+ e impede o contador de ultrapassar 0xf
+    or $t1 , $t1 , $s0
+    sw $t1 , LATE($t0)          #write counter
+
+
+    #ler RB3
+    lw $t1 , PORTB($t0)
+    andi $t1 , 0x0002
+    beq $t1 , 0x0002 , else       
+
+
+    sll $s0 , $s0 , 1
+    blt $s0 , 0x10 , endif1     #if(cnt >= ... 0001 0000)cnt = 1;
+
+    li $s0 , 1                   
+
+endif1:
+
+    j endif
+else:
+    srl $s0 , $s0 , 1
+    bne $s0 , 0 , endif2        #if(cnt == 0) cnt = 1000;
+
+    li $s0 , 0x8;
+
+endif2:
+
+endif:
+
+
+
+    li $v0 , 333
+    jal delay                   #delay(333); (~3hz)
+
+    j while                     #}
+
+
+    jr $ra
+
+
+delay:
+    li $v0 , RESET_CORE_TIMER
+    syscall
+    delay_while:
+    li $v0 , READ_CORE_TIMER
+    syscall
+    mul $v1 , $a0 , 20000
+    bge $v0 , $v1 , delay_ewhile
+    j delay_while
+    delay_ewhile:
+    jr $ra
+                
+

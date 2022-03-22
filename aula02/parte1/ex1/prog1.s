@@ -9,9 +9,9 @@
 .equ PRINT_INT , 6
 
 
-.equ TICKS ,	 200000		#100hz
+	 #200000		#100hz
 		#2000000 	#10hz
-		#4000000	#5hz
+.equ TICKS ,		4000000	#5hz
 		#20000000	#1hz
 
 

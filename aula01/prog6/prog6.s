@@ -13,8 +13,8 @@
 str1:   .space SIZE+1
 str2:   .space SIZE+1
 str3:   .space 2*SIZE+1
-str_tex1:   .asciiz "Introduza 2 strings: "
-str_tex2:   .asciiz "Resultados:\n"
+str_tex1:   .asciiz "Introduza 2 strings: \n"
+str_tex2:   .asciiz "Resultados: \n"
 
 .text
 
@@ -48,10 +48,18 @@ main:
     li $v0 , PRINT_INT  
     syscall             #printInt(strlen(str1) , 10);
 
+    li $a0 , ' '
+    li $v0 , PUT_CHAR
+    syscall
+
     li $a0 , (SIZE+1)
     li $a1 , 10
     li $v0 , PRINT_INT
     syscall             #printInt(strlen(str2) , 10);
+
+    li $a0 , ' '
+    li $v0 , PUT_CHAR
+    syscall
 
     la $a0 , str3
     la $a1 , str2
@@ -63,6 +71,10 @@ main:
     move $a0 , $v0
     li $v0 , PRINT_STR
     syscall             #printStr(strcat(str3 , str2));
+
+    li $a0 , ' '
+    li $v0 , PUT_CHAR
+    syscall
 
     la $a0 , str1
     la $a1 , str2
@@ -85,7 +97,7 @@ strlen:
     li $t0 , 0
     strlen_for:
         lb $t1 , 0($a0)
-        beq $t1 , 0 , strlen_efor
+        beq $t1 , '\0' , strlen_efor
         addi $t0 , $t0 , 1
         addiu $a0 , $a0 , 1
         j strlen_for

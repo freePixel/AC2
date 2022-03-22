@@ -19,7 +19,7 @@ while:
 	li $v0 , RESET_CORE_TIMER
 	syscall
 
-    li $a0 , 10
+    li $a0 , 1000
     jal delay
 
 	move $a0 , $t0

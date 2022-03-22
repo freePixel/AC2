@@ -59,7 +59,9 @@ while:					#while(true){
 	lw $t1 , PORTD($t0)
 	andi $t1 , $t1 , 0x0100		# $t1 = 0b0000 ... 000 RB0 (LER BIT 8 DO PORTD)
 
-	#xori $t1 , $t1 , 0x0100	# INVERTER RD8 (EX 2)
+	xori $t1 , $t1 , 0x0100	# INVERTER RD8 (EX 2)
+	srl $t1 , $t1 , 8
+	
 	
 	lw $t2 , LATE($t0)
 	andi $t2 , $t2 , 0xfffe		

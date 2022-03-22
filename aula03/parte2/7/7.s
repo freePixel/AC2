@@ -14,7 +14,7 @@
 
 
 #I/O
-.equ SFT_BASE_HI , 0xBF88
+.equ SFR_BASE_HI , 0xBF88
 
 .equ TRISB , 0x6040
 .equ PORTB  , 0x6050
@@ -41,3 +41,11 @@
 
 main:
 	
+    li $t0 , SFR_BASE_HI
+    li $t1 , TRISE($t0)
+    andi $t1 , $t1 , 0xfff0
+    sw $t1 , TRISE($t0)         #RE[0..4] OUTPUTS
+
+    li $t1 , TRISB($t0)
+    ori $t1 , $t1 , 0x000f
+    sw $t1 , TRISB($t0)        #RB[0..4] INPUTS

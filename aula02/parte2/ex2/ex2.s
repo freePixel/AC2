@@ -26,6 +26,26 @@ main:
 	li $s2 , 0
 while:
 
+	addi $s2 , $s2 , 1
+
+	
+
+
+	rem $v0 , $s2 , 10
+	bne $v0 , 0 , eif1
+	
+	addi $s0 , $s0 , 1
+
+eif1:
+	rem $v0 , $s2 , 2
+	bne $v0 , 0 , eif2
+	
+	addi $s1 , $s1 , 1	
+
+eif2:
+	
+
+
 	li $a0 , '\r'
 	li $v0 , PUT_CHAR
 	syscall			#putChar('\r');
@@ -53,20 +73,7 @@ while:
 	syscall			#printInt(cnt1,10|5<<16);
 
 
-	rem $v0 , $s2 , 10
-	bne $v0 , 0 , eif1
 	
-	addi $s2 , $s2 , 1
-
-eif1:
-	rem $v0 , $s1 , 2
-	bne $v0 , 0 , eif2
-	
-	addi $s1 , $s1 , 1	
-
-eif2:
-	
-	addi $s2 , $s2 , 1
 	
 	li $a0 , 100
 	jal delay
