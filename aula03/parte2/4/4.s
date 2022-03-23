@@ -40,8 +40,8 @@
 .globl main
 #$s0 -> contador
 main:
-    
-    li $t0 , SFR_BASE_HI
+    li $s0 , 1
+    lui $t0 , SFR_BASE_HI
     lw $t1 , TRISE($t0)
     andi $t1 , $t1 , 0xfff0
     sw $t1 , TRISE($t0)         #RE[0..4] OUTPUTS
@@ -53,7 +53,7 @@ main:
 while:                          #{
 
     
-    li $t0 , SFR_BASE_HI
+    lui $t0 , SFR_BASE_HI
     lw $t1 , LATE($t0)
     andi $t1 , $t1 , 0xfff0
     andi $s0 , $s0 , 0x000f     #evita a escrita em RB4+ e impede o contador de ultrapassar 0xf
@@ -73,13 +73,13 @@ while:                          #{
     li $s0 , 1                   
 
 endif1:
-
+    
     j endif
 else:
     srl $s0 , $s0 , 1
-    bne $s0 , 0 , endif2        #if(cnt == 0) cnt = 1000;
 
-    li $s0 , 0x8;
+    bne $s0 , 0 , endif2
+    li $s0 , 0x8
 
 endif2:
 
@@ -87,7 +87,7 @@ endif:
 
 
 
-    li $v0 , 333
+    li $a0 , 333
     jal delay                   #delay(333); (~3hz)
 
     j while                     #}

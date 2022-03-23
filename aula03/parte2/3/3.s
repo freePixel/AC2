@@ -41,7 +41,7 @@
 #$s0 -> contador
 main:
     
-    li $t0 , SFR_BASE_HI
+    lui $t0 , SFR_BASE_HI
     lw $t1 , TRISE($t0)
     andi $t1 , $t1 , 0xfff0
     sw $t1 , TRISE($t0)         #RE[0..4] OUTPUTS
@@ -53,7 +53,7 @@ main:
 while:                          #{
 
     
-    li $t0 , SFR_BASE_HI
+    lui $t0 , SFR_BASE_HI
     lw $t1 , LATE($t0)
     andi $t1 , $t1 , 0xfff0
     andi $s0 , $s0 , 0x000f     #evita a escrita em RB4+ e impede o contador de ultrapassar 0xf
@@ -76,7 +76,7 @@ endif:                          #}
 
 
 
-    li $v0 , 500
+    li $a0 , 500
     jal delay                   #delay(500);
 
     j while                     #}

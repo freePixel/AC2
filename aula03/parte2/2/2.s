@@ -1,16 +1,16 @@
 #SYSCALLS
-.equ IN_KEY		, 1
-.equ GET_CHAR		, 2
-.equ PUT_CHAR		, 3
-.equ READ_INT		, 4
-.equ READ_INT10		, 5
-.equ PRINT_INT		, 6
-.equ PRINT_INT10	, 7
-.equ PRINT_STR		, 8
-.equ READ_STR		, 9
-.equ EXIT		, 10
-.equ READ_CORE_TIMER	, 11
-.equ RESET_CORE_TIMER  	, 12
+.equ IN_KEY     , 1
+.equ GET_CHAR       , 2
+.equ PUT_CHAR       , 3
+.equ READ_INT       , 4
+.equ READ_INT10     , 5
+.equ PRINT_INT      , 6
+.equ PRINT_INT10    , 7
+.equ PRINT_STR      , 8
+.equ READ_STR       , 9
+.equ EXIT       , 10
+.equ READ_CORE_TIMER    , 11
+.equ RESET_CORE_TIMER   , 12
 
 
 #I/O
@@ -41,7 +41,7 @@
 #$s0 -> contador
 main:
     
-    li $t0 , SFR_BASE_HI
+    lui $t0 , SFR_BASE_HI
     lw $t1 , TRISE($t0)
     andi $t1 , $t1 , 0xfff0
     sw $t1 , TRISE($t0)         #RE[0..4] OUTPUTS
@@ -53,7 +53,7 @@ main:
 while:                          #{
 
     
-    li $t0 , SFR_BASE_HI
+    lui $t0 , SFR_BASE_HI
     lw $t1 , LATE($t0)
     andi $t1 , $t1 , 0xfff0
     andi $s0 , $s0 , 0x000f     #evita a escrita em RB4+ e impede o contador de ultrapassar 0xf
@@ -61,11 +61,26 @@ while:                          #{
     sw $t1 , LATE($t0)          #write counter
 
 
+    lw $t1 , PORTB($t0)
+    andi $t1 ,$t1, 0x0008
+    beq $t1 , 0x0008 , else
+
+    addi $s0 , $s0 , 1        #counter++;
+
+    j endif
+else:
 
     addi $s0 , $s0 , -1          #counter--;
 
-    li $v0 , 250
-    jal delay                   #delay(250);
+endif:
+
+    li $v0 , PRINT_INT10
+    move $a0 , $s0
+    syscall
+
+
+    li $a0 , 250
+    jal delay                   #delay(1000);
 
     j while                     #}
 
@@ -85,4 +100,3 @@ delay:
     delay_ewhile:
     jr $ra
                 
-
