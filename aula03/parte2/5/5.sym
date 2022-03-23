@@ -1,0 +1,36 @@
+GAS LISTING 5/5.s 			page 1
+
+
+DEFINED SYMBOLS
+               5/5.s:2      *ABS*:0000000000000001 IN_KEY
+               5/5.s:3      *ABS*:0000000000000002 GET_CHAR
+               5/5.s:4      *ABS*:0000000000000003 PUT_CHAR
+               5/5.s:5      *ABS*:0000000000000004 READ_INT
+               5/5.s:6      *ABS*:0000000000000005 READ_INT10
+               5/5.s:7      *ABS*:0000000000000006 PRINT_INT
+               5/5.s:8      *ABS*:0000000000000007 PRINT_INT10
+               5/5.s:9      *ABS*:0000000000000008 PRINT_STR
+               5/5.s:10     *ABS*:0000000000000009 READ_STR
+               5/5.s:11     *ABS*:000000000000000a EXIT
+               5/5.s:12     *ABS*:000000000000000b READ_CORE_TIMER
+               5/5.s:13     *ABS*:000000000000000c RESET_CORE_TIMER
+               5/5.s:17     *ABS*:000000000000bf88 SFR_BASE_HI
+               5/5.s:19     *ABS*:0000000000006040 TRISB
+               5/5.s:20     *ABS*:0000000000006050 PORTB
+               5/5.s:21     *ABS*:0000000000006060 LATB
+               5/5.s:23     *ABS*:0000000000006080 TRISC
+               5/5.s:24     *ABS*:0000000000006090 PORTC
+               5/5.s:25     *ABS*:00000000000060a0 LATC
+               5/5.s:27     *ABS*:00000000000060c0 TRISD
+               5/5.s:28     *ABS*:00000000000060d0 PORTD
+               5/5.s:29     *ABS*:00000000000060e0 LATD
+               5/5.s:31     *ABS*:0000000000006100 TRISE
+               5/5.s:32     *ABS*:0000000000006110 PORTE
+               5/5.s:33     *ABS*:0000000000006120 LATE
+               5/5.s:42     .text:0000000000000000 main
+               5/5.s:53     .text:000000000000001c while
+               5/5.s:84     .text:0000000000000060 delay
+               5/5.s:87     .text:0000000000000068 delay_while
+               5/5.s:93     .text:0000000000000090 delay_ewhile
+
+NO UNDEFINED SYMBOLS
