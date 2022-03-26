@@ -11,16 +11,21 @@ void delay(unsigned int ms)
 
 int main(void)
 {
-    __TRISCbits_t TRISCbits;
-    __LATCbits_t  LATCbits;
+    unsigned int counter = 0;
+   
 
-    TRISCbits.TRISC14 = 0;
+   TRISE = (TRISE & 0xFFF0);
 
     while(1)
     {
-        delay(500);
-        LATCbits.LATC14 = !LATCbits.LATC14;
+        counter = counter & 0xf;        //previne a escrita em bits superiores a 3 do LATE
+        LATE = (LATE & 0xfff0) | counter;
+
+        counter++;
+        if(counter > 15) counter = 0;
+        delay(250);
     }
-    return 0;
     
+
+    return 0;
 }
