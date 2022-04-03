@@ -60,15 +60,16 @@ while:                          #{
     or $t1 , $t1 , $s0
     sw $t1 , LATE($t0)          #write counter
 
-
-
-
     srl $v0 , $s0 , 3
     andi $v0 , $v0 , 0x0001
     xori $v0 , $v0 , 0x0001     #negar bit
-    or $s0 , $s0 , $v0          #merge
 
     sll $s0 , $s0 , 1
+
+    
+    or $s0 , $s0 , $v0          #merge
+
+    
 
 
     

@@ -29,8 +29,8 @@ DEFINED SYMBOLS
                  6.s:33     *ABS*:0000000000006120 LATE
                  6.s:42     .text:0000000000000000 main
                  6.s:53     .text:000000000000001c while
-                 6.s:81     .text:0000000000000060 delay
-                 6.s:84     .text:0000000000000068 delay_while
-                 6.s:90     .text:0000000000000090 delay_ewhile
+                 6.s:82     .text:0000000000000060 delay
+                 6.s:85     .text:0000000000000068 delay_while
+                 6.s:91     .text:0000000000000090 delay_ewhile
 
 NO UNDEFINED SYMBOLS
