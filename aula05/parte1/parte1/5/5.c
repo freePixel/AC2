@@ -47,12 +47,18 @@ int main(void)
     TRISB = TRISB & 0xffff80ff;
     TRISDbits.TRISD5 = 0;
     TRISDbits.TRISD6 = 0;
-    int x = 0;
+    int counter = 0, i = 0;
     while(1)
     {
-        
-        send2displays(x , TRUE);
-        x++;
-        delay(10);
+        i = 0;
+        do{
+            send2displays(counter , TRUE);
+            delay(10);
+        }
+        while(++i < 20);
+
+        counter = (counter + 1) % 256;
     }
+
+    return 0;
 }
