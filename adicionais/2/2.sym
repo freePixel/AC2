@@ -1,0 +1,28 @@
+GAS LISTING 2.s 			page 1
+
+
+DEFINED SYMBOLS
+                 2.s:4      *ABS*:000000000000bf88 SFR_BASE_HI
+                 2.s:6      *ABS*:0000000000006040 TRISB
+                 2.s:7      *ABS*:0000000000006050 PORTB
+                 2.s:8      *ABS*:0000000000006060 LATB
+                 2.s:10     *ABS*:0000000000006080 TRISC
+                 2.s:11     *ABS*:0000000000006090 PORTC
+                 2.s:12     *ABS*:00000000000060a0 LATC
+                 2.s:14     *ABS*:00000000000060c0 TRISD
+                 2.s:15     *ABS*:00000000000060d0 PORTD
+                 2.s:16     *ABS*:00000000000060e0 LATD
+                 2.s:18     *ABS*:0000000000006100 TRISE
+                 2.s:19     *ABS*:0000000000006110 PORTE
+                 2.s:20     *ABS*:0000000000006120 LATE
+                 2.s:28     .text:0000000000000000 main
+                 2.s:35     .text:0000000000000010 while
+                 2.s:49     .text:0000000000000034 eif1
+                 2.s:98     .text:00000000000000b8 end
+                 2.s:56     .text:0000000000000048 eif2
+                 2.s:63     .text:000000000000005c eif3
+                 2.s:70     .text:0000000000000070 eif4
+                 2.s:79     .text:0000000000000080 eif5
+                 2.s:87     .text:0000000000000090 while2
+
+NO UNDEFINED SYMBOLS

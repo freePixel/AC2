@@ -35,7 +35,7 @@ main:
 while:
 
 
-    li $v0 , 2
+    li $v0 , 1
 	syscall
 
 	lw $t1 , LATE($t0)
@@ -67,7 +67,16 @@ eif3:
 	ori $t1 , $t1 , 0x0008
 	j end
 
-eif4: #default case
+eif4:
+
+    bne $v0 , 0 , eif5
+
+    #andi $t1 , $t1 , 0xfff0
+	#sw $t1 , LATE($t0)
+	j while
+
+
+eif5: #default case
 
 	ori $t1 , 0x000f
 	sw $t1 , LATE($t0)
