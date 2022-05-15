@@ -29,6 +29,7 @@ int main(void)
         LATDbits.LATD11 = 0;        // Reset LATD11 (LATD11=0)
 
         aux = ADC1BUF0;
+        //printInt10(aux);
 
         IFS1bits.AD1IF = 0;         // Reset AD1IF
     }

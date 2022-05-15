@@ -1,3 +1,5 @@
+#include <detpic32.h>
+
 int main(void)
 {
     TRISBbits.TRISB4 = 1;

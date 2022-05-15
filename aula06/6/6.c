@@ -68,7 +68,7 @@ int main(void)
     AD1CON1bits.CLRASAM = 1;
 
     AD1CON3bits.SAMC = 16;
-    AD1CON2bits.SMPI = 4;
+    AD1CON2bits.SMPI = 3;
 
     AD1CHSbits.CH0SA = 4;
 
