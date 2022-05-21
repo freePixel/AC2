@@ -1,9 +1,10 @@
 #include <detpic32.h>
 
+
 int main(void)
 {
-    T3CONbits.TCKPS = 5;
-    PR2 = 312499;
+    T3CONbits.TCKPS = 7;
+    PR3 = 39062;
     TMR3 = 0;
     T3CONbits.TON = 1;
     while(1)

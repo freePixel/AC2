@@ -47,7 +47,4 @@ int main(void)
         LATDbits.LATD11 = 0;
     }
     return 0;
-
-
-
 }

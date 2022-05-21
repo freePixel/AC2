@@ -2,13 +2,13 @@
 
 int main(void)
 {
-    T3CONbits.TCKPS = 5;
-    PR2 = 312499;
+    T3CONbits.TCKPS = 7;
+    PR3 = 39062;
     TMR3 = 0;
     
     IPC3bits.T3IP = 2;
     IEC0bits.T3IE = 1;
-    IFS0bits.T2IF = 0;
+    IFS0bits.T3IF = 0;
     EnableInterrupts();
     T3CONbits.TON = 1;
     while(1)
