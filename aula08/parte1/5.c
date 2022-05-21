@@ -1,20 +1,31 @@
 #include <detpic32.h>
 
 
+<<<<<<< HEAD
 //TIMER 3: TEMPO A 0 = 40ms e TEMPO a 1 = 40ms
 //TIMER 1: TEMPO A 0 = 200ms e TEMPO a 1 = 200ms
 
+=======
+>>>>>>> 9ddac1a627c02dac0e2260a7e110b8e4a5ee1fb3
 int main(void)
 {
 
     TRISDbits.TRISD0 = 0;
     TRISDbits.TRISD2 = 0;
 
+<<<<<<< HEAD
     T3CONbits.TCKPS = 4;
     T1CONbits.TCKPS = 2;
 
     PR3 = 49999;
     PR1 = 63491;
+=======
+    T3CONbits.TCKPS = 5;
+    T1CONbits.TCKPS = 5;
+
+    PR3 = 24999;
+    PR1 = 124999;
+>>>>>>> 9ddac1a627c02dac0e2260a7e110b8e4a5ee1fb3
 
     TMR3 = 0;
     TMR1 = 0;
