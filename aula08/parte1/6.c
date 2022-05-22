@@ -7,19 +7,11 @@ int main(void)
     TRISEbits.TRISE1 = 0;
     TRISEbits.TRISE3 = 0;
 
-<<<<<<< HEAD
     T3CONbits.TCKPS = 4;
     T1CONbits.TCKPS = 2;
 
     PR3 = 49999;
     PR1 = 63491;
-=======
-    T3CONbits.TCKPS = 5;
-    T1CONbits.TCKPS = 5;
-
-    PR3 = 24999;
-    PR1 = 124999;
->>>>>>> 9ddac1a627c02dac0e2260a7e110b8e4a5ee1fb3
 
     TMR3 = 0;
     TMR1 = 0;
@@ -55,8 +47,4 @@ void _int_(4) isr_T1(void)
 
     LATEbits.LATE1 = !LATEbits.LATE1;
     IFS0bits.T1IF = 0;
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 9ddac1a627c02dac0e2260a7e110b8e4a5ee1fb3
