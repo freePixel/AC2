@@ -1,5 +1,6 @@
 #include <detpic32.h>
 
+volatile char tCount = 0;
 
 int main(void)
 {
@@ -33,13 +34,20 @@ int main(void)
 
 void _int_(8) isr_T2(void)
 {
-    LATEbits.LATE0 = 0;
+    tCount++;
+    if(tCount == 6)
+    {
+        LATEbits.LATE0 = 0;
+        T1CONbits.TON = 0;
+    }
     IFS0bits.T1IF = 0;
-    T1CONbits.TON = 0;
+
 }
 
 void _int_(7) isr_INT1(void)
 {
     T1CONbits.TON = 1;
+    IFS0bits.INT1IF = 0;
     LATEbits.LATE0 = 1;
+    tCount = 0;
 }
