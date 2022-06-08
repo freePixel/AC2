@@ -3,7 +3,7 @@
 #define TRUE 1
 #define FALSE 0
 
-
+volatile int volts = 0;
 
 void delay(unsigned int ms)
 {
@@ -51,14 +51,19 @@ void send2displays(unsigned char value , int active)
 
 
 
-
-int main(void)
+void initialize()
 {
 
     TRISB = TRISB & 0xffff80ff;
     TRISDbits.TRISD5 = 0;
     TRISDbits.TRISD6 = 0;
     TRISBbits.TRISB0 = 1;
+    EnableInterrupts();
+}
+
+
+int main(void)
+{
 
 
     TRISBbits.TRISB4 = 1;

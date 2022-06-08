@@ -39,7 +39,18 @@ int main(void)
     {
         while(U2STAbits.TRMT == 0);
         LATDbits.LATD11 = 1;
-        puts("12345");
+        //puts("12345"); //5 , 450 us | 9 , 800us
+        puts("123456789AB");
         LATDbits.LATD11 = 0;
-    }
+    } 
 }
+
+/*
+115200
+                12345       123456789       123456789A      123456789AB
+tempo a 1:       3us           5us              90us            180us
+
+tempo a 0:       450us         800us            800us            80us
+
+
+*/

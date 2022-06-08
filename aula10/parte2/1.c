@@ -57,7 +57,8 @@ int main(void)
     {
         while(IFS0bits.T3IF == 0);
         IFS0bits.T3IF = 0;
-        putc1(0x5A); // 0xA5, 0xF0, 0x0F, 0xFF , 0x00
+        putc1((char)0xe4); // 0xA5, 0xF0, 0x0F, 0xFF , 0x00
+        
         
 
 
