@@ -1,5 +1,10 @@
 #include <detpic32.h>
 
+
+/*
+    compile & run command: pcompile 5.c && ldpic32 5.hex && pterm 1200
+*/
+
 #define TRUE 1
 #define FALSE 0
 
