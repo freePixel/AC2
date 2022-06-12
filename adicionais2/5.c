@@ -2,7 +2,7 @@
 
 
 /*
-    compile & run command: pcompile 5.c && ldpic32 5.hex && pterm 1200
+    compile & run command: pcompile 5.c && ldpic32 5.hex && pterm 1200,N,8,1
 */
 
 #define TRUE 1
